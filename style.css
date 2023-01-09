@@ -21,3 +21,23 @@ body {
   background-color: #5d5c61;
   color: white;
 }
+
+a {
+  text-decoration: none;
+}
+
+#resume {
+  color: white;
+  padding: 13px 8px;
+  border-radius: 10px;
+  background-color: #7395ae;
+}
+
+#resume:hover {
+  background-color: #557a95;
+}
+
+.headeritem {
+  display: flex;
+  align-items: center;
+}
