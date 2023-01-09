@@ -1,8 +1,9 @@
 html {
   height: 100%;
-  width: 100%;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  background-color: #5d5c61;
+  background-color: #5c5d63;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -11,6 +12,7 @@ body {
   justify-content: space-between;
   align-items: center;
   margin: 0px;
+  max-width: 100%;
 }
 
 #header {
@@ -18,26 +20,71 @@ body {
   width: 100%;
   justify-content: space-around;
   padding: 20px 0px;
-  background-color: #5d5c61;
   color: white;
 }
 
 a {
   text-decoration: none;
+  color: white;
 }
 
 #resume {
   color: white;
-  padding: 13px 8px;
+  padding: 13px 20px;
   border-radius: 10px;
-  background-color: #7395ae;
+  background-color: #5d5c61;
 }
 
 #resume:hover {
-  background-color: #557a95;
+  background-color: grey;
 }
 
 .headeritem {
   display: flex;
   align-items: center;
+}
+
+#biopic {
+  width: 350px;
+  height: auto;
+  border-radius: 10px;
+  margin-left: 180px;
+}
+
+#bio {
+  display: flex;
+  padding: 100px 0px;
+  width: 100%;
+  justify-content: space-around;
+  background-color: white;
+  align-items: center;
+}
+
+#biocontent {
+  margin-right: 400px;
+  padding-left: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 300px;
+}
+
+.biotitle {
+  font-size: 40px;
+  width: 800px;
+}
+
+.biodescription {
+  font-size: 20px;
+  width: 500px;
+  color: grey;
+}
+
+#projects {
+  padding: 50px 0px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  background-color: #414145;
+  color: white;
 }
