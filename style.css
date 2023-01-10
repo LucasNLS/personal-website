@@ -87,7 +87,7 @@ a {
   width: 100%;
   display: flex;
   justify-content: space-around;
-  background-color: #414145;
+  background-color: grey;
   color: white;
 }
 
@@ -140,9 +140,24 @@ a:hover {
 }
 
 .highlighted {
-  color: rgb(80, 46, 46);
+  color: rgb(112, 55, 55);
 }
 
 .other-titles {
-  align-self: center;
+  color: rgb(21, 18, 18);
+}
+
+#footer {
+  padding: 10px 0px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.links {
+  display: flex;
+  gap: 20px;
+}
+ul {
+  list-style: none;
 }
