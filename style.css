@@ -4,6 +4,7 @@ html {
   background-color: #5c5d63;
   max-width: 100%;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -49,6 +50,7 @@ a {
   height: auto;
   border-radius: 10px;
   margin-left: 180px;
+  border: solid black;
 }
 
 #bio {
@@ -87,4 +89,60 @@ a {
   justify-content: space-around;
   background-color: #414145;
   color: white;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 350px;
+  gap: 10px;
+}
+
+.projectimage {
+  border-radius: 10px;
+  height: 250px;
+  width: auto;
+  transition: all 0.2s linear;
+}
+
+a:hover {
+  color: grey;
+}
+
+.projectimage:hover {
+  transform: scale(1.1);
+}
+
+.project-image-contain {
+  height: 250px;
+  width: auto;
+  border: solid black 2px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.extra-project {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 15px;
+}
+
+#otherproject-title {
+  margin-top: -2px;
+}
+
+#experience {
+  padding: 300px 0px;
+  background-color: white;
+  width: 100%;
+}
+
+.highlighted {
+  color: rgb(80, 46, 46);
+}
+
+.other-titles {
+  align-self: center;
 }
