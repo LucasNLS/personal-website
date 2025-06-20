@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <meta charset="UTF-8" />
     <title>Lucas' Webpage</title>
     <link rel="stylesheet" href="style.css" />
@@ -21,16 +22,22 @@
         <img src="images/second_bio.JPG" alt="Picture of Lucas" id="biopic" />
       </div>
       <div id="biocontent">
-        <h2 class="biotitle">A little bit about me</h2>
+        <h2 class="biotitle">Welcome to my website :)</h2>
         <div class="biodescription">
-          Hello! I'm <span class ="highlighted">Lucas</span>, a Senior at Columbia University's Fu Foundation
-          School of Engineering and Applied Sciences studying Computer Science.
-          I am from <span class ="highlighted">La Paz, Bolivia</span>, and I currently live in New York City.
-          Outside of coding, I love acting, singing, crocheting, playing guitar, and binge-watching shows.
+          Hello! I'm <span class ="highlighted">Lucas</span>, a recent graduate of Columbia University  with a degree in Computer Science.
+        </div>
+        <div class="biodescription">
+          I am from La Paz, Bolivia, and I currently live in <span class ="highlighted">New York City</span>
+        </div>
+        <div class="biodescription">
+          I am interested in software development, back-end development, and AI development. 
+        </div>
+        <div class="biodescription">
+          Outside of coding, I love acting, singing, crocheting, playing the piano, and binge-watching shows. 
         </div>
       </div>
     </div>
-    <div id="projects">
+    <div id="projects" class="scroll-animate">
       <div class="project">
         <div class = "other-titles" >Calculator</div>
         <div class="project-image-contain">
@@ -93,7 +100,7 @@
         </div>
       </div>
     </div>
-    <div id="experience">
+    <div id="experience" class="scroll-animate">
       <div class = "experience-container">
         <div class = "logo-title">
           <img src = "images/linkedin_logo.png" alt = "Linkedin logo" class = "explogo"/>
@@ -172,7 +179,8 @@
                 </div>
         </div>
     </div>
-    <div id = "footer">
+    </div>
+    <div id = "footer" class="scroll-animate">
         <div>Made by Lucas Lugones ©</div>
         <ul class = "links">
             <li><a href = "mailto:lucasn.lugones@gmail.com">E-mail</a></li>
@@ -181,4 +189,30 @@
         </ul>
     </div>
   </body>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initial fade-in for the whole page to prevent flash of unstyled content
+      document.body.style.transition = 'opacity 1s ease-in-out';
+      document.body.style.opacity = '1';
+
+      const observerOptions = {
+        threshold: 0.1, // Trigger when 10% of the element is visible
+      };
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target); // Stop observing once the animation is triggered
+          }
+        });
+      }, observerOptions);
+
+      // Find all elements to animate on scroll and observe them
+      const animatedElements = document.querySelectorAll('.scroll-animate');
+      animatedElements.forEach(el => {
+        observer.observe(el);
+      });
+    });
+  </script>
 </html>
