@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
 
 @keyframes fadeInUp {
@@ -65,16 +64,16 @@
   animation: fadeInUp 0.8s ease-out 0.6s both;
 }
 
-html {
+html, body {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
   height: 100%;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   background-color: #bdc1c7; /* Deep navy blue background */
-  max-width: 100%;
-  overflow-x: hidden;
   scroll-behavior: smooth;
-  color: #ffffff; /* White text for better contrast */
+  color: black; /* White text for better contrast */
   font-size: 16px;
-  line-height: 1.6;
 }
 
 body {
@@ -83,8 +82,6 @@ body {
   justify-content: space-between;
   align-items: center;
   margin: 0px;
-  max-width: 100%;
-  position: relative;
 }
 
 #header {
@@ -110,10 +107,11 @@ a {
   font-family: 'Inter', sans-serif;
   font-weight: 600;
   letter-spacing: 0.02em;
+  text-decoration: none;
 }
 
 #resume:hover {
-  background-color: #0c2032; /* Darker blue on hover */
+  background-color: #051019; /* Darker blue on hover */
 }
 
 .headeritem {
@@ -122,14 +120,19 @@ a {
   font-family: 'Inter', sans-serif;
   font-weight: 500;
   letter-spacing: 0.01em;
+  font-size: 20px;
+  color: #0f2942;
+  text-decoration: none;
+}
+
+.resume-text {
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
 }
 
 #biopic {
-  width: 350px;
-  height: auto;
-  border-radius: 10px;
-  margin-left: 180px;
-  border: solid black;
+  width: 50%;
 }
 
 #bio {
@@ -142,40 +145,37 @@ a {
 }
 
 #biocontent {
-  margin-right: 400px;
-  padding-left: 100px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  width: 300px;
+  align-items: center;
+  justify-content: center;
 }
 
 .biotitle {
   font-family: 'Quicksand', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   font-size: 40px;
-  width: 800px;
   font-weight: 600;
   letter-spacing: -0.01em;
   line-height: 1.2;
   font-display: swap;
+  padding-bottom: 40px;
 }
 
 .biodescription {
   font-family: 'Inter', sans-serif;
   font-size: 18px;
-  width: 500px;
+  width: 80%;
+  padding-bottom: 10px;
   color: #4b5563; 
   font-weight: 400;
-  line-height: 1.7;
 }
 
-#projects {
+#experiences {
   padding: 50px 0px;
   width: 100%;
   display: flex;
   justify-content: space-around;
-  background-color:#0f2942;
-  color: white;
+  background-color: #ffffff;
 }
 
 .project {
@@ -194,6 +194,13 @@ a {
   height: 250px;
   width: auto;
   transition: all 0.2s linear;
+}
+
+.imagebio {
+  padding-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 a:hover {
@@ -225,7 +232,7 @@ a:hover {
 
 #experience {
   padding: 100px 0px;
-  background-color: #ffffff;
+  background-color:#0f2942;
   width: 100%;
 }
 
@@ -262,20 +269,25 @@ a:hover {
 }
 
 #experience {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  gap: 2rem;
+  width: 100%;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .experience-container {
-  padding: 20px;
-  width: 800px;
-  border: solid #1d4ed8 2px; 
-  border-radius: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1.5rem;
+  border: 1px solid #1d4ed8;
+  border-radius: 12px;
+  background-color: #f8fafc;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
   display: flex;
   flex-direction: column;
-  background-color: #f8fafc; 
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .logo-title {
@@ -312,89 +324,10 @@ a:hover {
   font-weight: 400;
 }
 
-@media (max-width: 768px) {
-  #bio {
-    padding: 50px 20px;
-    flex-direction: column;
-    text-align: center;
-  }
-
-  #biopic {
-    margin-left: 0;
-    width: 100%;
-    max-width: 300px;
-  }
-
-  #biocontent {
-    margin-right: 0;
-    padding-left: 0;
-    width: 100%;
-    max-width: 500px;
-  }
-
-  .biotitle {
-    font-size: 32px;
-    width: 100%;
-    color:#0f2942;
-  }
-
-  .biodescription {
-    width: 100%;
-  }
-
-  .experience-container {
-    width: 90%;
-    margin: 0 auto;
-  }
-
-  #projects {
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-  }
-
-  .project {
-    width: 90%;
-    max-width: 400px;
-  }
-
-  html {
-    font-size: 15px;
-  }
-
-  .other-titles {
-    font-size: 20px;
-  }
-}
-
-@media (max-width: 480px) {
-  #header {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .experience-container {
-    width: 95%;
-  }
-
-  .logo-title {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .explogo {
-    height: 60px;
-  }
-
-  html {
-    font-size: 14px;
-  }
-
-  .biotitle {
-    font-size: 28px;
-  }
-
-  .experience-container h2 {
-    font-size: 20px;
-  }
+a, button, .resume-button {
+  min-height: 44px;
+  min-width: 44px;
+  font-size: 1rem;
+  padding: 0.75rem 1rem;
+  box-sizing: border-box;
 }
