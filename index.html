@@ -37,22 +37,33 @@
       </div>
       <div id="biocontent" class="col-sm-12 col-md-12 col-lg-6 ">
         <h2 class="biotitle">Welcome to my website :)</h2>
-        <div class="biodescription">
-          Hello! I'm <span class ="highlighted">Lucas</span>, a recent graduate of Columbia University  with a degree in Computer Science.
+        <div class="biodescription_1">
+          Hello! I'm <span class ="highlighted">Lucas Lugones</span>.
+        </div>
+        <div class="biodescription_1">
+          I'm a <span class = "highlighted">Software Engineer</span>, and an <span class = "highlighted">Actor</span>.
         </div>
         <div class="biodescription">
-          I am from La Paz, Bolivia, and I currently live in <span class ="highlighted">New York City</span>
+          I am from La Paz, Bolivia, and I currently live in <span class ="highlighted">New York City</span>. I recently graduated from Columbia University with a degree in Computer Science.
         </div>
         <div class="biodescription">
           I am interested in software development, back-end development, and AI development. 
         </div>
         <div class="biodescription">
-          Outside of coding, I love acting, singing, crocheting, playing the piano, and binge-watching shows. 
+          Outside of coding, and acting, I love singing, crocheting, playing the piano, and binge-watching shows. 
         </div>
       </div>
     </div>
-    <div id="experience" class="scroll-animate">
-      <div class = "experience-container">
+
+    <!--Experience Section-->
+    <div id="experience-container-ov" class="scroll-animate">
+      <div class = "d-flex justify-content-center">
+        <h1 class = "experience-title">Experience</h1>
+      </div>
+      <!--Each row has two experiences-->
+      <div class = "row">
+      <div class = "col-sm-12 col-md-6 col-lg-6 d-flex justify-content-center middle-gap">
+      <div class = "experience-container ">
         <div class = "logo-title">
           <img src = "images/linkedin_logo.png" alt = "Linkedin logo" class = "explogo"/>
           <h2>LinkedIn</h2>
@@ -65,6 +76,8 @@
           </ul>
         </div>
       </div>
+      </div>
+      <div class = "col-sm-12 col-md-6 col-lg-6 d-flex justify-content-center middle-gap">
       <div class="experience-container">
         <div class = "logo-title">
             <img src = "images/ibm_logo.png" alt = "IBM logo" class="explogo"/>
@@ -78,6 +91,10 @@
                         
             </div>
         </div>
+      </div>
+      </div>
+      <div class = "row">
+        <div class = "col-sm-12 col-md-6 col-lg-6 d-flex justify-content-center middle-gap">
         <div class="experience-container">
             <div class = "logo-title">
             <img src = "images/mltlogo.png" alt="MLT Logo" class="explogo"/>
@@ -90,6 +107,8 @@
                 <ul>
             </div>
         </div>
+        </div>
+        <div class = "col-sm-12 col-md-6 col-lg-6 d-flex justify-content-center middle-gap">
         <div class="experience-container">
             <div class = "logo-title">
                 <img src = "images/culogo.png" alt = "Columbia University Logo" class="explogo culogo"/>
@@ -103,6 +122,10 @@
                             
                 </div>
         </div>
+        </div>
+        </div>
+        <div class = "row">
+          <div class = "col-sm-12 col-md-6 col-lg-6 d-flex justify-content-center middle-gap">
         <div class="experience-container">
             <div class = "logo-title">
                 <img src = "images/ezclaimslogo.jpeg" alt = "E-Z Claims logo" class="explogo"/>
@@ -116,6 +139,8 @@
                             
                 </div>
         </div>
+        </div>
+        <div class = "col-sm-12 col-md-6 col-lg-6 d-flex justify-content-center middle-gap">
         <div class="experience-container">
             <div class = "logo-title">
                 <img src = "images/elcolgadorlogo.jpeg" alt = "El Colgador Logo" class="explogo"/>
@@ -128,6 +153,8 @@
                         <li>Assisted on social media analytics by promoting the Facebook and Instagram page, which grew to 23,000 Facebook users in following.</li>
                             
                 </div>
+        </div>
+        </div>
         </div>
     </div>
     <div id="experiences" class="scroll-animate">
@@ -210,7 +237,7 @@
       document.body.style.opacity = '1';
 
       const observerOptions = {
-        threshold: 0.1, // Trigger when 10% of the element is visible
+        threshold: 0.05, // Trigger when 10% of the element is visible
       };
 
       const observer = new IntersectionObserver((entries, observer) => {
